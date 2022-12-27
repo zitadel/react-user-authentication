@@ -1,0 +1,35 @@
+/* The body element covers the entire page, so setting the background color here
+   will set the background color for the whole page */
+   body {
+    font-family: 'Open Sans', sans-serif;
+    /* The hex code for the light blue color from the image is #9fd3e0 */
+    background-color: #9fd3e0;
+    /* Center the text in the body element */
+    text-align: center;
+  }
+  
+  /* The h1, h2, and h3 elements are used for headings */
+  h1, h2, h3 {
+    /* The hex code for the dark blue color from the image is #2c3e50 */
+    color: #2c3e50;
+    text-align: center;
+  }
+  
+  /* The button element represents a clickable button */
+  button {
+    /* The hex code for the light purple color from the image is #9b59b6 */
+    background-color: #9b59b6;
+    /* The hex code for the white color is #ffffff */
+    color: #ffffff;
+    /* Add some padding and a border to the button */
+    padding: 10px 20px;
+    border: none;
+    /* Add some hover effect to the button */
+    cursor: pointer;
+  }
+  
+  button:hover {
+    /* The hex code for the dark purple color from the image is #8e44ad */
+    background-color: #8e44ad;
+  }
+  
