@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 import Login from './components/Login';
 import Callback from './components/Callback';
-import './App.css';
+//import './App.css';
 import authConfig from './authConfig';
 import { UserManager, WebStorageStateStore } from 'oidc-client-ts';
 
