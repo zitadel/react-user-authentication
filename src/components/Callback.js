@@ -6,7 +6,6 @@ const Callback = ({ auth, setAuth, userManager, userInfo, setUserInfo, handleLog
   useEffect(() => {
     if (auth === null) {
       userManager.signinRedirectCallback().then((user) => {
-        console.log(user);
         if (user) {
           setAuth(true);
           const access_token = user.access_token;
@@ -18,14 +17,12 @@ const Callback = ({ auth, setAuth, userManager, userInfo, setUserInfo, handleLog
           })
             .then(response => response.json())
             .then(userInfo => {
-              console.log(userInfo);
               setUserInfo(userInfo);
             });
         } else {
           setAuth(false);
         }
       }).catch((error) => {
-        console.log(error);
         setAuth(false);
       });
     }
@@ -33,7 +30,6 @@ const Callback = ({ auth, setAuth, userManager, userInfo, setUserInfo, handleLog
 
 
   if (auth === true && userInfo) {
-    console.log(userInfo);
     return (
       <div>
         <h1>Welcome, {userInfo.name}!</h1>

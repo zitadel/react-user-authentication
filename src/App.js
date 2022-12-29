@@ -27,11 +27,7 @@ function App() {
     const [userInfo, setUserInfo] = useState(null);
 
     useEffect(() => {
-        console.log(userManager);
-        console.log(userManager.getUser);
-
         userManager.getUser().then((user) => {
-            console.log(user);
             if (user) {
                 setAuthenticated(true);
             } else {
