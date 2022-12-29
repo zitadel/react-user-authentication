@@ -5,12 +5,9 @@ const Callback = ({ auth, setAuth, userManager, userInfo, setUserInfo, handleLog
 
   useEffect(() => {
     if (auth === null) {
-      console.log("Inside CallbackJS useEffect........")
-
       userManager.signinRedirectCallback().then((user) => {
         console.log(user);
         if (user) {
-          console.log("AppJS-> useEffect -> user is not null....")
           setAuth(true);
           const access_token = user.access_token;
           // Make a request to the user info endpoint using the access token
