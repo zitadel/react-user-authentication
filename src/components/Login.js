@@ -1,16 +1,6 @@
-import { useEffect, useState } from 'react';
-import { Navigate } from 'react-router-dom';
-import { generateCodeVerifier, generateCodeChallenge } from './utils';
+import { Navigate } from "react-router-dom";
 
-const Login = ({ auth, handleLogin, userManager}) => {
-  const [codeVerifier, setCodeVerifier] = useState(null);
-
-  useEffect(() => {
-    // Generate a code verifier
-    const newCodeVerifier = generateCodeVerifier();
-    setCodeVerifier(newCodeVerifier);
-  }, []);
-
+const Login = ({ auth, handleLogin, userManager }) => {
   return (
     <div>
       {auth === null && <div>Loading...</div>}
@@ -19,13 +9,8 @@ const Login = ({ auth, handleLogin, userManager}) => {
           <h1>Welcome!</h1>
           <button
             onClick={() => {
-              // To use the codeVerifier in the authorization request, you'll
-              // need to generate a code challenge from it and pass it along
-              // as the `code_challenge` parameter in the authorization request
-              const codeChallenge = generateCodeChallenge(codeVerifier);
-
               // Perform the authorization request, including the code challenge
-              handleLogin(codeChallenge);
+              handleLogin();
             }}
           >
             Please log in.
@@ -38,4 +23,3 @@ const Login = ({ auth, handleLogin, userManager}) => {
 };
 
 export default Login;
-
