@@ -1,5 +1,5 @@
 const authConfig = {
-    authority: 'https://some_text.zitadel.cloud/', //Replace with your zitadel instance
+    authority: 'https://some_text.zitadel.cloud/', //Replace with your issuer URL
     client_id: 'ABC123@Project', //Replace with your client id
     redirect_uri: 'http://localhost:3000/callback',
     response_type: 'code',
