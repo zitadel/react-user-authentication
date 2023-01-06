@@ -33,7 +33,7 @@ const Callback = ({ auth, setAuth, userManager, userInfo, setUserInfo, handleLog
     return (
       <div>
         <h1>Welcome, {userInfo.name}!</h1>
-        <h2>Your Zitadel Profile Information</h2>
+        <h2>Your ZITADEL Profile Information</h2>
         <h3>Name:  {userInfo.name}</h3>
         <h3>Email: {userInfo.email}</h3>
         <h3>Email Verified: {userInfo.email_verified? "Yes": "No"}</h3>
