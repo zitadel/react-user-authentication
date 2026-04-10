@@ -1,3 +1,7 @@
+> [!WARNING]
+> This repository is archived and no longer maintained.
+> For the latest version and active development, please refer to [zitadel/example-auth-react](https://github.com/zitadel/example-auth-react).
+
 # Readme
 
 Please follow the detailed instructions on how to run this React sample with ZITADEL [here](https://zitadel.com/docs/guides/start/quickstart). 
